@@ -9,7 +9,10 @@
 ?>
 
 <!DOCTYPE html>
+<<<<<<< HEAD:index.php
 
+=======
+>>>>>>> 25984d4fb28fbe3e2ff1b596065dab5505a106c5:index.html
 <html lang="pt-br">
 <head>
 	<title>Tela de Login</title>
@@ -58,7 +61,14 @@
 	<div class="limiter">
 		<div class="container-login100 fundo" >
 			<div class="wrap-login100">
+<<<<<<< HEAD:index.php
 				<div class="login100-form-title" style="background-image: url(images/logobarba3.png);">					
+=======
+				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Tópicos Integradores II
+					</span>
+>>>>>>> 25984d4fb28fbe3e2ff1b596065dab5505a106c5:index.html
 				</div>
                     <div id="alerta" class="alert alert-danger" style="display: none;">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
@@ -77,6 +87,7 @@
 						<span class="focus-input100"></span>
 					</div>
 
+<<<<<<< HEAD:index.php
 					<div class="flex-sb-m w-full p-b-30">
 
 						<div class="contact100-form-checkbox">
@@ -91,6 +102,22 @@
 							</a>
 						</div>
 					</div>
+=======
+					<!--<div class="flex-sb-m w-full p-b-30">-->
+						<!--<div class="contact100-form-checkbox">-->
+							<!--<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">-->
+							<!--<label class="label-checkbox100" for="ckb1">-->
+								<!--Permanecer conectado-->
+							<!--</label>-->
+						<!--</div>-->
+
+						<!--<div>-->
+							<!--<a href="#" class="txt1">-->
+								<!--Esqueceu a senha?-->
+							<!--</a>-->
+						<!--</div>-->
+					<!--</div>-->
+>>>>>>> 25984d4fb28fbe3e2ff1b596065dab5505a106c5:index.html
 
 						<div class="container-login100-form-btn">
 							<button id="btn_login" class="login100-form-btn">
