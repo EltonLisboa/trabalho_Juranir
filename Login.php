@@ -6,6 +6,7 @@ require 'conexao.php';
 
 $conexao = Conexao::getInstance();
 
+
 // Recebe os dados do formulário
 $login = (isset($_POST['login'])) ? $_POST['login'] : '' ;
 $senha = (isset($_POST['senha'])) ? $_POST['senha'] : '' ;

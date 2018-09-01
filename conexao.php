@@ -2,22 +2,22 @@
  /*  
   * Constantes de parâmetros para configuração da conexão  
   */  
- define('HOST', '127.0.0.1');  
+ define('HOST', '185.201.11.44');  
  define('DBNAME', 'u136429679_facul');  
  define('CHARSET', 'utf8');  
  define('USER', 'u136429679_facul');  
  define('PASSWORD', 'trabalho');  
 
+ // define('HOST', '127.0.0.1');  
+ // define('DBNAME', 'portalplan');  
+ // define('CHARSET', 'utf8');  
+ // define('USER', 'root');  
+ // define('PASSWORD', '');  
+
  class Conexao {  
 
-   /*  
-    * Atributo estático para instância do PDO  
-    */  
    private static $pdo;
 
-   /*  
-    * Escondendo o construtor da classe  
-    */ 
    private function __construct() {  
      //  
    } 
@@ -36,5 +36,7 @@
        }  
      }  
      return self::$pdo;  
-   }  
+   }
+
  }
+

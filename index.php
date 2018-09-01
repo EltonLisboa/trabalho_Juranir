@@ -6,13 +6,14 @@
 	if(isset($_SESSION['logado']) && $_SESSION['logado'] == 'SIM'):
 		header("Location: pagina_inicial.php");
 	endif;
+
 ?>
 
 <!DOCTYPE html>
 
 <html lang="pt-br">
 <head>
-	<title>Tela de Login</title>
+	<title>SkaeggHeim BarberShop</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -36,6 +37,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 <!--===============================================================================================-->
 <style>
 
@@ -54,16 +56,12 @@
 
 
 <body>
-	
+
 	<div class="limiter">
 		<div class="container-login100 fundo" >
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(images/logobarba3.png);">					
 				</div>
-                    <div id="alerta" class="alert alert-danger" style="display: none;">
-                        <span class="glyphicon glyphicon-exclamation-sign"></span>
-                        <span id="mensagem"></span>
-                    </div>
 				<form id="form_login" class="login100-form validate-form">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="O Login é obrigatório">
 						<span class="label-input100">Login</span>
@@ -73,7 +71,7 @@
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "A senha é obrigatória">
 						<span class="label-input100">Senha</span>
-						<input id="senha" class="input100" type="password" name="senha" placeholder="Informe a senha">
+						<input id="senha" class="input100" type="password" name="senha" placeholder="Informe a senha" autocomplete="">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -85,24 +83,24 @@
 								Permanecer conectado
 							</label>
 						</div>
-						<div>
-							<a href="#" class="txt1">
-								Esqueceu a senha?
-							</a>
-						</div>
 					</div>
 
-						<div class="container-login100-form-btn">
-							<button id="btn_login" class="login100-form-btn">
+					<div class="container-login100-form-btn">
+						<button id="btn_login" class="login100-form-btn">
 							Entrar
-							</button>
-						</div>
-
+						</button>
+					</div>
+					
+					<div class="row" style="width: 100%; height: 20px;"></div>				
+					<div id="alerta" class="alert alert-danger" style="width: 100%;display: none;">
+						<div id="msg"></div>
+					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
+
+
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -118,16 +116,17 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<!-- <script src="js/main.js"></script> -->
 	
 <script>
 
 $('document').ready(function(){
 
+
 	$("#btn_login").click(function(){
 		
 		var data = $("#form_login").serialize();
-			
+		
 		$.ajax({
 			type : 'POST',
 			url  : 'login.php',
@@ -137,19 +136,23 @@ $('document').ready(function(){
 			{	
 				$("#btn_login").html('Validando ...');
 			},
-			success :  function(response){						
-				if(response.codigo == "1"){	
-					$("#btn_login").html('Entrar');
-					$("#alerta").css('display', 'none')
+			success : function(response){						
+				if(response.codigo == "1"){					
+					$("#btn_login").html('Entrar');					
 					window.location.href = "pagina_inicial.php";
 				}
-				else{			
-					$("#btn_login").html('Entrar');										
-					$("#alerta").css('display', 'block');
-					$("#mensagem").html('<strong>Erro! </strong>' + response.mensagem);
+				else{								
+					
+					$("#btn_login").html('Entrar');
+					$("#alerta").css("display","block");
+					$("#msg").html('<strong>Erro! </strong>' + response.mensagem);
+					
 				}
 		    }
+
 		});
+
+
 	});
 
 });

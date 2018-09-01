@@ -34,6 +34,7 @@ endif;
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 <!--===============================================================================================-->
 <style>
 
@@ -78,16 +79,34 @@ endif;
 	<div class="limiter">		
 		<div class="container-login100 fundo">
 			<div id="page_div">
-				<div class="container-fluid">
+				<div class="col-lg-14">
 					<div class="row">
 						<div class="col-md-4">
-							<img src="images/quadro_endereço.png" alt="servicos-img" style="width: 90%;">
+							<div class="white-box" style="height: 250px;width: 250px;">
+							 alguma coisa
+							</div>
 						</div>
+						<div class="col-md-1"></div>
 						<div class="col-md-4">
-							<img src="images/quadro_serviços.png" alt="servicos-img" style="width: 90%;">	
+							<div class="white-box" style="height: 250px;width: 250px;">
+							 mais alguma coisa
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<div class="white-box" style="height: 250px;width: 250px;">
+							se der coloca algo aqui
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<div class="white-box" style="height: 250px;width: 250px;">
+							mais e mais
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="row"></div>
 			</div>
 		</div>
 	</div>
