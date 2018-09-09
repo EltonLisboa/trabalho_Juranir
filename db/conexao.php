@@ -4,7 +4,7 @@
  define('DBNAME', 'u136429679_facul');  
  define('CHARSET', 'utf8');  
  define('USER', 'u136429679_facul');  
- define('SENHA', 'trabalho');   
+ define('SENHA', 'trabalho');  
 
 
  class Conexao {  
@@ -23,7 +23,8 @@
      if (!isset(self::$conn)) {  
        try {  
         
-         self::$conn = mysqli_connect(HOST,USER,SENHA,DBNAME);         
+         self::$conn = mysqli_connect(HOST,USER,SENHA,DBNAME);
+         mysqli_set_charset(self::$conn, CHARSET); 
 
        } catch (Exception $e) {  
          print "Erro: " . $e->getMessage();  

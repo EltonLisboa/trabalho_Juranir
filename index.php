@@ -13,7 +13,7 @@
 
 <html lang="pt-br">
 <head>
-	<title>SkaeggHeim BarberShop</title>
+	<title>SISTEMA ADMINISTRATIVO</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -42,7 +42,7 @@
 <style>
 
 	.fundo{
-		background-image: url(images/fundo2.png);
+		background-image: url(images/fundo_tec.png);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -60,18 +60,18 @@
 	<div class="limiter">
 		<div class="container-login100 fundo" >
 			<div class="wrap-login100">
-				<div class="login100-form-title" style="background-image: url(images/logobarba3.png);">					
+				<div class="login100-form-title" style="background-image: url(images/logobarba4.png);">					
 				</div>
-				<form id="form_login" class="login100-form validate-form">
+				<form id="form_login" class="login100-form validate-form" metod="POST">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="O Login é obrigatório">
 						<span class="label-input100">Login</span>
-						<input id="login" class="input100" type="text" name="login" placeholder="Informe o usuário">
+						<input class="input100" type="text" name="login" placeholder="Informe o usuário">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "A senha é obrigatória">
 						<span class="label-input100">Senha</span>
-						<input id="senha" class="input100" type="password" name="senha" placeholder="Informe a senha" autocomplete="">
+						<input class="input100" type="password" name="senha" placeholder="Informe a senha" autocomplete="">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -80,7 +80,7 @@
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 							<label class="label-checkbox100" for="ckb1">
-								Permanecer conectado
+								Permanecer conectado								
 							</label>
 						</div>
 					</div>
@@ -126,7 +126,10 @@ $('document').ready(function(){
 	$("#btn_login").click(function(){
 		
 		var data = $("#form_login").serialize();
-		
+		// var login=$('#login').val();
+		// var senha="<?php echo sha1(md5("+$('#senha').val()+")); ?>";
+		// var data = "login="+login+"&senha="+senha;
+
 		$.ajax({
 			type : 'POST',
 			url  : 'login.php',
@@ -136,16 +139,18 @@ $('document').ready(function(){
 			{	
 				$("#btn_login").html('Validando ...');
 			},
-			success : function(response){						
-				if(response.codigo == "1"){					
+			success : function(resposta){						
+				if(resposta.codigo == "1"){					
 					$("#btn_login").html('Entrar');					
 					window.location.href = "pagina_inicial.php";
+					alert(resposta.mensagem);
 				}
 				else{								
 					
 					$("#btn_login").html('Entrar');
 					$("#alerta").css("display","block");
-					$("#msg").html('<strong>Erro! </strong>' + response.mensagem);
+					
+					alert(resposta.mensagem);
 					
 				}
 		    }

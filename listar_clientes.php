@@ -1,11 +1,15 @@
 <?php
 require("db/conexao.php");
+
+$conn = Conexao::getInstance();
+
 include("_head");
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <body>
-<?php include("_navbar"); ?>
+
 
 <div class="container">
 
@@ -14,7 +18,7 @@ include("_head");
         <br/>
         <?php
         $sql = "SELECT * FROM u136429679_facul.cliente";
-        $query = mysqli_query($conexao, $sql);
+        $query = mysqli_query($conn, $sql);
 
         while ($linha = mysqli_fetch_array($query)) {
 
@@ -37,4 +41,5 @@ include("_head");
 <?php include("_js"); ?>
 
 </body>
+
 </html>

@@ -643,7 +643,7 @@ pre {
 }
 .navbar-header {
   width: 100%;
-  background: #458ab6;
+  background: #cc6600;
   border: 0px;
 }
 .navbar-default {
@@ -3604,8 +3604,12 @@ table.focus-on tbody tr.focused td {
   stroke-width: 1px;
   stroke: #90a4ae;
 }
+.bar_top{
+    background-color: #cc6600;      
+}
+
 .sidebar {
-  background: #303340;
+  background: #351803e3;
   overflow-y: auto;
 }
 .sidebar .sidebar-nav.navbar-collapse {
