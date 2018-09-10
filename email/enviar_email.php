@@ -32,5 +32,6 @@ if (!$mail->send()) {
     echo $IsHTML;
 } else {
     echo 'E-mail enviado!';
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0; URL=../pagina_inicial.php'>";
 }
 ?>
