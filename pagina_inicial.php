@@ -37,6 +37,7 @@ endif;
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 <!--===============================================================================================-->
+
 <style>
 
 	.fundo{
@@ -63,7 +64,7 @@ endif;
 
 </style>
 </head>
-<body>
+<body onload="espera_abrir_popup()">
 		
 		<div class="navbar-header bar_top">
 			<div align="right">
@@ -152,6 +153,37 @@ endif;
 	</div>
 </div>
 
+
+<!--POP_UP - Cadastro de e-mail-->
+<!-- Button trigger modal -->
+<button hidden id="openModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Deseja receber os últimos posts por e-mail? <br>Cadastre-se.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="email/processa_cadastro_email.php" method="POST">
+                    <p><input type="email" name="email" placeholder="Informe o e-mail que deseja cadastrar." required></p>
+                    <p><input type="submit" value="Cadastrar"></p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 <footer>
 <!--===============================================================================================-->
@@ -180,6 +212,15 @@ endif;
 			$("#conteudo").load(pagina);
 		}
 	</script>
+
+    <script type="text/javascript">
+        function abrir() {
+            document.getElementById('openModal').click();
+        }
+        function espera_abrir_popup() {
+            setTimeout("abrir()", 3000)
+        }
+    </script>
 
 </footer>
 </html>
