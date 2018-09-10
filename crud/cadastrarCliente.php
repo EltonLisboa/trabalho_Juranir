@@ -1,17 +1,17 @@
 <?php
-    require("conexao.php");
+    require_once("../db/conexao.php");
+
+    $conn = Conexao::getInstance();
 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
-    $data_cadastro = date('Y-m-d H:i');
     $status = 'Ativo';
 
     $sql = "INSERT INTO cliente (nome, email, telefone, data_cadastro, status) VALUES ('$nome', '$email', '$telefone', '$data_cadastro', '$status')";
-    $query = mysqli_query($conexao, $sql);
-    fecharConexao($conexao);
+    $query = mysqli_query($conn, $sql);
 
     if($query)
-        header("Location: ../listar_clientes.php");
+        header("Location: ../listarClientes.php");
     else
         echo "Houve um erro ao tentar cadastrar o cliente";

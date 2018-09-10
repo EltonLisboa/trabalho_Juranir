@@ -1,11 +1,18 @@
  <?php 
 //configura conexão 
- define('HOST', '185.201.11.44');  
+
+ define('HOST', '127.0.0.1');
+ define('DBNAME', 'u136429679_facul');
+ define('CHARSET', 'utf8');
+ define('USER', 'root');
+ define('SENHA', '');
+ /*
+ define('HOST', '185.201.11.44');
  define('DBNAME', 'u136429679_facul');  
  define('CHARSET', 'utf8');  
  define('USER', 'u136429679_facul');  
  define('SENHA', 'trabalho');  
-
+**/
 
  class Conexao {  
 
