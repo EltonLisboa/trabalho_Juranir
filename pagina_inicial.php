@@ -4,7 +4,9 @@ session_start();
 if(!isset($_SESSION['logado'])):
 	header("Location: index.php");
 endif;
-?>
+
+$abrirModal =  $_COOKIE["openModal"];
+//?>
 
 <!DOCTYPE html>
 
@@ -215,7 +217,13 @@ endif;
 
     <script type="text/javascript">
         function abrir() {
-            document.getElementById('openModal').click();
+            var _abrirModal  = "<?php print $abrirModal ; ?>";
+
+            if (_abrirModal != 'False') {
+                document.getElementById('openModal').click();
+            }
+
+            document.cookie="openModal=False";
         }
         function espera_abrir_popup() {
             setTimeout("abrir()", 3000)
