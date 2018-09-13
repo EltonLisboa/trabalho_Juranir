@@ -174,13 +174,10 @@ $abrirModal =  $_COOKIE["openModal"];
             </div>
             <div class="modal-body">
                 <form action="email/processa_cadastro_email.php" method="POST">
-                    <p><input type="email" name="email" placeholder="Informe o e-mail que deseja cadastrar." required></p>
-                    <p><input type="submit" value="Cadastrar"></p>
+                    <p><input type="email" name="email" placeholder="Informe o e-mail que deseja cadastrar." required style="border: 1px solid gray"></p>
+                    <br>
+                    <p><button type="submit" class="btn btn-primary">Cadastrar</button></p>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
     </div>
