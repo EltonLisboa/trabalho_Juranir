@@ -5,7 +5,7 @@ $conn = Conexao::getInstance();
 
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
-$sql_email = "INSERT INTO Newsletter_email (email) VALUES ('$email')";
+$sql_email = "INSERT INTO newsletter_email (email) VALUES ('$email')";
 $resultado_email = mysqli_query($conn, $sql_email);
 
 // VERIFICAR COM MARCOS COMO VERIFICAR SE UM ÍTEM FOI INSERIDO NO BANCO
