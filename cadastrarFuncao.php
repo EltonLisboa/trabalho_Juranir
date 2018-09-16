@@ -21,4 +21,5 @@
     </form>
 </div>
 </body>
+<?php include ("_js.php"); ?>
 </html>
