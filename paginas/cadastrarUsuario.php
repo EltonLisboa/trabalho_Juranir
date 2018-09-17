@@ -29,12 +29,25 @@
             <div class="form-group">
                 <label for="id_funcao" class="col-md-1 control-label">Função&nbspID</label>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" id="id_funcao" name="id_funcao" placeholder="Função ID">
+                    <select type="text" class="form-control" id="id_funcao" name="id_funcao" placeholder="Função ID">
+                        <option> Selecione a Função </option>
+                        <?php
+                        require("../db/conexao.php");
+                        $conn = Conexao::getInstance();
+
+                        $idfuncao = "SELECT * FROM u136429679_facul.funcao";
+                        $idfuncoes = mysqli_query($conn, $idfuncao);
+                        while ($todasFuncoes = mysqli_fetch_assoc($idfuncoes)){?>
+                            <option value = "<?php echo $todasFuncoes['id_funcao']; ?>"><?php echo $todasFuncoes['nome_funcao'];?>
+                            </option><?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-offset-1 col-md-10">
-                    <button type="submit" class="btn btn-default">Cadastrar</button>
+                <input type="submit" class="btn btn-default" value="Cadastrar">
                 </div>
             </div>
         </form>
