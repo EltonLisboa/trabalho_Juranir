@@ -37,8 +37,9 @@ include("_head.php");
     </div>
 
 </div>
-
-
+    <div class="col-md-offset-1 col-md-10">
+        <a href="pagina_inicial.php" class="btn btn-default" > Voltar</a>
+    </div>
 </body>
 
 </html>

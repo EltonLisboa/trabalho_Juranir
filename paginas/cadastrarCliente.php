@@ -4,10 +4,10 @@
     
 <body>
 
-<?php include ("_navbar.php"); ?>
+<?php include("_navbarCliente.php"); ?>
 
         <div class="container">
-            <form class="form-horizontal" method="post" action="crud/cadastrarCliente.php">
+            <form class="form-horizontal" method="post" action="../crud/cadastrarCliente.php">
                 <div class="form-group">
                     <label for="nome" class="col-md-1 control-label">Nome</label>
                     <div class="col-md-10">

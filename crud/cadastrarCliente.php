@@ -12,6 +12,6 @@
     $query = mysqli_query($conn, $sql);
 
     if($query)
-        header("Location: ../listarClientes.php");
+        header("Location: ../paginas/listarClientes.php");
     else
         echo "Houve um erro ao tentar cadastrar o cliente";

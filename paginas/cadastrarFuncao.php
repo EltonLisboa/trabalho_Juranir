@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="pt-br">
-<?php include ("_head"); ?>
 <body>
-<?php include ("_navbar_usu"); ?>
+<?php include ("_navbarFuncao.php"); ?>
 
 <div class="container">
-    <form class="form-horizontal" method="post" action="crud/cadastrarFuncao.php">
+    <form class="form-horizontal" method="post" action="../crud/cadastrarFuncao.php">
         <div class="form-group">
             <label for="funcao" class="col-md-1 control-label">Função</label>
             <div class="col-md-11">

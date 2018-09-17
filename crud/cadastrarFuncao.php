@@ -10,6 +10,6 @@
     $query = mysqli_query($conn, $sql);
 
     if($query)
-        echo "Função cadastrada";
+        header("Location: ../paginas/pagina_inicial.php");
     else
         echo "Houve um erro ao tentar cadastrar a Função";

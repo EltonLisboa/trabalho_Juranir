@@ -13,7 +13,7 @@
     $query = mysqli_query($conn, $sql);
 
     if($query)
-        echo "Usuário cadastrado com sucesso";
+        header("Location: ../paginas/pagina_inicial.php");
     else
         echo "Houve um erro ao tentar cadastrar o cliente";
 

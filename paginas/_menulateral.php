@@ -22,6 +22,7 @@
                           <ul class="nav nav-second-level" style="height: 1px;">
                               <li><a onclick="carrega('cadastrarUsuario.php')" href="#"><i class="fa fa-user"></i> &nbsp Cadastro de Usuários</a></li>
                 <li><a onclick="carrega('cadastrarCliente.php')" href="#"><i class="fa fa-user"></i> &nbsp Cadastro de Clientes</a></li>
+                              <li><a onclick="carrega('cadastrarFuncao.php')" href="#"><i class="fa fa-user"></i> &nbsp Cadastro de Função</a></li>
                           </ul>
                         </div>                        
                     </li>
