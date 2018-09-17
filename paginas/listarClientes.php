@@ -1,9 +1,9 @@
 <?php
-require("db/conexao.php");
+require("../db/conexao.php");
 
 $conn = Conexao::getInstance();
 
-include("_head");
+include("_head.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ include("_head");
         <div class="panel-heading" align="center"><h4><b>Usuários Cadastrados</b></h4></div>
         <br/>
         <?php
-        $sql = "SELECT * FROM u136429679_facul.cliente";
+        $sql = "SELECT * FROM cliente";
         $query = mysqli_query($conn, $sql);
 
         while ($linha = mysqli_fetch_array($query)) {
@@ -38,7 +38,6 @@ include("_head");
 
 </div>
 
-<?php include("_js"); ?>
 
 </body>
 

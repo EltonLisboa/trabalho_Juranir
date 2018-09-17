@@ -35,7 +35,7 @@
                     <li><a class="waves-effect" data-toggle="collapse" href="#relatorios"><i class="fa fa-file-text-o"></i> Relatórios<span class="fa arrow"></span></a>
                         <div id="relatorios" class="panel-collapse collapse">
                           <ul class="nav nav-second-level" style="height: 1px;">
-                              <li> <a onclick="carrega('listar_clientes.php')" href="#"><i class="fa fa-files-o"></i> &nbsp Listar Clientes</a> </li>
+                              <li> <a onclick="carrega('listarClientes.php')" href="#"><i class="fa fa-files-o"></i> &nbsp Listar Clientes</a> </li>
                           </ul>
                       </div>
                     </li>

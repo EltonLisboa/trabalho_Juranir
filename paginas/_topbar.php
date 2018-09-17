@@ -14,11 +14,11 @@
 			<div align="right">
 			 <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;">
-            <img src="images/door.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs" style="color: black;">Sair</b>
+            <img src="../images/door.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs" style="color: black;">Sair</b>
             </a>
         
            	<ul class="dropdown-menu" style="left: 93%;">
-              	<li><a href="logout.php" class="log_hover"><i class="fa fa-power-off" style="hover"></i>Logout</a></li>
+              	<li><a href="../logout.php" class="log_hover"><i class="fa fa-power-off" style="hover"></i>Logout</a></li>
           	</ul>
                         
         </li>
@@ -27,5 +27,5 @@
 		</div>
 
 </body>
-    <?php include ("_js.php"); ?>
+    
 </html>

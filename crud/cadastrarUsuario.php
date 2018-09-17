@@ -5,7 +5,7 @@
 
     $nome = $_POST['nome'];
     $login = $_POST['login'];
-    $senha = $_POST['senha'];
+    $senha = sha1($_POST['senha']); // inclusão de criptografia sha1;
     $id_funcao = $_POST['id_funcao'];
 
 

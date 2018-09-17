@@ -17,7 +17,7 @@ $abrirModal =  $_COOKIE["openModal"];
 <style>
 
 	.fundo{
-		background-image: url(images/fundo_tec.png);
+		background-image: url(../images/fundo_tec.png);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;

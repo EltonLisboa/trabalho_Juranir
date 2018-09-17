@@ -13,27 +13,29 @@ else
 { $login = ''; };
 
 if(isset($_POST['senha']))
-{ $senha = $_POST['senha']; }
+{ $senha = $_POST['senha'];}
 else
 { $senha = ''; };
 
 
-// Validações
-if (empty($login)){
-	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu login!'.$login);
-	echo json_encode($retorno);
-	exit();
-}
+// // Validações
+// if (empty($login)){
+// 	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha seu login!'.$login);
+// 	echo json_encode($retorno);
+// 	exit();
+// }
 
-if (empty($senha)){
-	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha sua senha!'.$senha);
-	echo json_encode($retorno);
-	exit();
-}
+// if (empty($senha)){
+//	$retorno = array('codigo' => 0, 'mensagem' => 'Preencha sua senha!'.$senha);
+// 	echo json_encode($retorno);
+// 	exit();
+// }
 
 
 //metodo de criptografia( deve ser inserido no cadastro do usuario)
-$senha = sha1(md5($senha));
+// metodo seguro e simples sem complicação
+$senha =  sha1($senha);
+
 
 // Validação do usuário/senha digitados
   $sql = "SELECT * FROM usuario WHERE login = '".$login."' and senha = '".$senha."' LIMIT 1";
@@ -41,7 +43,9 @@ $senha = sha1(md5($senha));
   if (mysqli_num_rows($query) != 1) {
       // Mensagem de erro quando os dados são inválidos e/ou o usuário não foi encontrado
   	  // Não permite o login
-      $retorno = "Login inválido!".$login.$senha;
+      $retorno = array('codigo' => 0, 'mensagem' => 'Login inválido!');
+      echo json_encode($retorno);
+
       $_SESSION['logado'] = 'NAO'; 
       exit();
   } else {
